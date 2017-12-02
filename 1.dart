@@ -1,14 +1,13 @@
 import 'utils.dart';
 
 void main() {
-  var prev = -1, sum = 0;
-  final units = new List<int>.from(read('1.txt').trim().codeUnits);
-  for (final c in units..add(units.first)) {
-    final n = c - '0'.codeUnitAt(0);
-    if (n == prev) {
-      sum += n;
+  final units = read('1.txt').trim().codeUnits;
+  var prev = units.last, sum = 0;
+  for (final unit in units) {
+    if (unit == prev) {
+      sum += unit - '0'.codeUnitAt(0);
     }
-    prev = n;
+    prev = unit;
   }
   print(sum);
 }
