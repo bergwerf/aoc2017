@@ -16,8 +16,19 @@ void main() {
     y += dy * length;
     i += length;
   }
-  final d = x.abs() + y.abs();
-  print(d);
+  final d1 = x.abs() + y.abs();
+  print(d1);
+
+  // constant time solution part 1
+  // Imagine problem as nested squares. Square surface is the number at the
+  // bottom right corner.
+  final side = sqrt(n).ceil(); // Side length of square the number is on
+  final sq = (side - 1) ~/ 2; // Square index (starting at 0)
+  final ps = pow(side - 2, 2); // Largest number in previous square
+  final pos1 = n - ps; // Position of n within the square
+  final pos2 = pos1 % (side - 1); // Position of n on the side
+  final d2 = sq + (pos2 - sq).abs();
+  print(d2);
 
   // part 2
   final grid = new Map<int, Map<int, int>>();
