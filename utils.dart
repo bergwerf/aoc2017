@@ -3,4 +3,4 @@ library aoc2017.aoc;
 
 import 'dart:io';
 
-String read(String path) => new File(path).readAsStringSync();
+String read(String file) => new File('input/$file').readAsStringSync();
