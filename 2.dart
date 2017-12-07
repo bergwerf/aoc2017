@@ -7,9 +7,8 @@ void main() {
       .split('\n')
       .map((l) => l.split(new RegExp(r'\s')).map(int.parse));
 
-  final checksum1 = data
-      .map((Iterable<int> l) => l.reduce(max) - l.reduce(min))
-      .reduce((a, b) => a + b);
+  final checksum1 =
+      data.map((Iterable<int> l) => l.reduce(max) - l.reduce(min)).reduce(sum);
 
   final checksum2 = data
       .map((Iterable<int> l) {
@@ -28,7 +27,7 @@ void main() {
         }
         throw new Exception('no pair of integers that evenly divide');
       })
-      .reduce((a, b) => a + b)
+      .reduce(sum)
       .toInt();
 
   print(checksum1);
