@@ -1,14 +1,8 @@
-import 'dart:math';
 import 'utils.dart';
 
 void main() {
-  part1();
-  part2();
-}
-
-void part1() {
-  final data =
-      read('10.txt').trim().split(new RegExp(r',\s*')).map(int.parse).toList();
+  // part 1
+  final data = read('10.txt').trim().split(new RegExp(r',\s*')).map(int.parse);
   final n = 256;
   final rope = new List<int>.generate(n, (i) => i);
 
@@ -22,14 +16,20 @@ void part1() {
     position = (position + length + skipsize++) % n;
   }
   print(rope[0] * rope[1]);
+
+  // part 2
+  print(knotHashHex(knotHash(read('10.txt').trim())));
 }
 
-void part2() {
-  final data = read('10.txt').trim().codeUnits;
+String knotHashHex(List<int> input) {
+  return input.map((i) => i.toRadixString(16).padLeft(2, '0')).join();
+}
+
+List<int> knotHash(String input) {
   final n = 256;
   final cycles = 64;
   final seed = [17, 31, 73, 47, 23];
-  final lengths = data.toList()..addAll(seed);
+  final lengths = input.codeUnits.toList()..addAll(seed);
   final rope = new List<int>.generate(n, (i) => i);
 
   var position = 0;
@@ -54,7 +54,5 @@ void part2() {
     }
   }
 
-  // Convert to hex string.
-  final str = sparse.map((i) => i.toRadixString(16)).join();
-  print(str);
+  return sparse;
 }
