@@ -5,7 +5,6 @@ void main() {
   final squares = new List<List<int>>();
   for (var y = 0; y < 128; y++) {
     final row = knotHash('$input-$y');
-    //print(knotHashHex(row));
     for (var x = 0; x < row.length; x++) {
       for (var n = 0; n < 8; n++) {
         if ((row[x] >> (7 - n)) & 1 == 1) {
@@ -36,16 +35,5 @@ void main() {
       }
     }
   }
-
-  // Print regions.
-  /*for (var y = 0; y < 128; y++) {
-    final buffer = new StringBuffer();
-    for (var x = 0; x < 128; x++) {
-      final sq = squares.where((sq) => sq[0] == x && sq[1] == y);
-      buffer.write(sq.isEmpty ? '.' : regionMap[squares.indexOf(sq.single)]);
-    }
-    print(buffer);
-  }*/
-
   print(regionMap.values.toSet().length);
 }
