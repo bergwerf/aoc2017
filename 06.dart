@@ -21,12 +21,3 @@ void main() {
   print(history.length -
       history.indexOf(history.singleWhere((list) => compareLists(list, data))));
 }
-
-bool compareLists(List a, List b) {
-  for (var i = 0; i < a.length; i++) {
-    if (b.length <= i || a[i] != b[i]) {
-      return false;
-    }
-  }
-  return true;
-}
