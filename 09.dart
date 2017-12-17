@@ -1,7 +1,7 @@
 import 'utils.dart';
 
 void main() {
-  final data = read('9.txt').trim().codeUnits;
+  final data = read('09.txt').codeUnits;
   final ignore = '!'.codeUnitAt(0);
   final groupOpen = '{'.codeUnitAt(0);
   final groupClose = '}'.codeUnitAt(0);

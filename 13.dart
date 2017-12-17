@@ -2,7 +2,7 @@ import 'dart:math';
 import 'utils.dart';
 
 void main() {
-  final data = (read('13.txt').trim().split('\n'))
+  final data = (read('13.txt').split('\n'))
       .map((line) => line.split(': ').map(int.parse).toList());
   final layers = new Map<int, int>.fromIterable(data,
       key: (kv) => kv[0], value: (kv) => kv[1]);

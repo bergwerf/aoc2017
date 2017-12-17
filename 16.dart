@@ -1,7 +1,7 @@
 import 'utils.dart';
 
 void main() {
-  final data = read('16.txt').trim().split(',');
+  final data = read('16.txt').split(',');
   final programs = new List<int>.generate(16, (i) => i);
 
   void swap(int a, int b) {

@@ -1,7 +1,7 @@
 import 'utils.dart';
 
 void main() {
-  final List<List<int>> data = (read('12.txt').trim().split('\n'))
+  final List<List<int>> data = (read('12.txt').split('\n'))
       .map((line) => (line.split(' ')..removeAt(1))
           .map((str) => int.parse(str.replaceAll(',', '')))
           .toList())

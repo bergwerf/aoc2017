@@ -2,8 +2,7 @@ import 'dart:math';
 import 'utils.dart';
 
 void main() {
-  final data = read('2.txt')
-      .trim()
+  final data = read('02.txt')
       .split('\n')
       .map((l) => l.split(new RegExp(r'\s')).map(int.parse));
 

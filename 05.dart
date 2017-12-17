@@ -2,7 +2,7 @@ import 'utils.dart';
 
 void main() {
   // part 1
-  final data = read('5.txt').trim().split('\n').map(int.parse).toList();
+  final data = read('05.txt').split('\n').map(int.parse).toList();
   final data1 = data.toList();
   var ptr = 0, counter = 0;
   while (ptr >= 0 && ptr < data1.length) {

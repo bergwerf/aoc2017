@@ -1,7 +1,7 @@
 import 'utils.dart';
 
 void main() {
-  final input = read('1.txt').trim();
+  final input = read('01.txt');
   print(solve(input, 1));
   print(solve(input, input.length ~/ 2));
 }

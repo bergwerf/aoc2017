@@ -2,7 +2,7 @@ import 'utils.dart';
 
 void main() {
   final Iterable<Iterable<String>> data =
-      read('4.txt').trim().split('\n').map((line) => line.split(' '));
+      read('04.txt').split('\n').map((line) => line.split(' '));
   final validLines1 = data.where((line) => line.toSet().length == line.length);
   print(validLines1.length);
 

@@ -10,7 +10,7 @@ class Disc {
 
 void main() {
   // Read data.
-  final List<Disc> data = read('7.txt').trim().split('\n').map((line) {
+  final List<Disc> data = read('07.txt').split('\n').map((line) {
     final info = new RegExp(r'([a-z]+)\s\(([0-9]+)\)').firstMatch(line);
     final name = info.group(1);
     final weight = int.parse(info.group(2));

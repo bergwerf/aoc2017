@@ -4,7 +4,7 @@ import 'utils.dart';
 void main() {
   // part 1
   final List<int> data =
-      read('6.txt').trim().split(new RegExp(r'\s')).map(int.parse).toList();
+      read('06.txt').split(new RegExp(r'\s')).map(int.parse).toList();
   final history = new List<List<int>>();
   while (!history.any((list) => compareLists(list, data))) {
     history.add(data.toList());

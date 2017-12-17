@@ -17,7 +17,7 @@ int hexDistance(Vec2 v) {
 
 void main() {
   // Using: https://stackoverflow.com/questions/5084801
-  final data = read('11.txt').trim().split(',');
+  final data = read('11.txt').split(',');
   final directions = {
     'n': new Vec2(0, 1),
     'ne': new Vec2(1, 0),

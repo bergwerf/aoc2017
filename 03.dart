@@ -6,7 +6,7 @@ void main() {
   const _dy = const [0, 1, 0, -1];
 
   // part 1
-  final n = int.parse(read('3.txt').trim());
+  final n = int.parse(read('03.txt'));
   var x = 0, y = 0;
   for (var i = 1, j = 0; i < n; j++) {
     final dx = _dx[j % 4], dy = _dy[j % 4];

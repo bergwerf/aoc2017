@@ -2,7 +2,7 @@ import 'utils.dart';
 
 void main() {
   // part 1
-  final data = read('10.txt').trim().split(new RegExp(r',\s*')).map(int.parse);
+  final data = read('10.txt').split(new RegExp(r',\s*')).map(int.parse);
   final n = 256;
   final rope = new List<int>.generate(n, (i) => i);
 
@@ -18,7 +18,7 @@ void main() {
   print(rope[0] * rope[1]);
 
   // part 2
-  print(knotHashHex(knotHash(read('10.txt').trim())));
+  print(knotHashHex(knotHash(read('10.txt'))));
 }
 
 String knotHashHex(List<int> input) {

@@ -2,7 +2,7 @@ import 'dart:math';
 import 'utils.dart';
 
 void main() {
-  final data = read('8.txt').trim().split('\n').map((l) => l.split(' '));
+  final data = read('08.txt').split('\n').map((l) => l.split(' '));
   final registers = new Map<String, int>();
   final process = {
     '>': (a, b) => a > b,
