@@ -31,7 +31,7 @@ void main() {
     final queue0l = queue0.length;
     final state1 = process(mem1, data[ptr1], queue0, queue1, ptr1, 2);
 
-    // Cound sends by process 1.
+    // Count sends by process 1.
     sendCount += queue0.length - queue0l;
 
     ptr0 = state0.pointer;
