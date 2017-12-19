@@ -3,7 +3,10 @@ library aoc2017.aoc;
 
 import 'dart:io';
 
-String read(String file) => new File('input/$file').readAsStringSync().trim();
+String read(String file, {bool trim: false}) {
+  final data = new File('input/$file').readAsStringSync();
+  return trim ? data.trim() : data;
+}
 
 num sum(num a, num b) => a + b;
 
