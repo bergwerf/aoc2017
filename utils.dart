@@ -3,7 +3,7 @@ library aoc2017.aoc;
 
 import 'dart:io';
 
-String read(String file, {bool trim: false}) {
+String read(String file, {bool trim: true}) {
   final data = new File('input/$file').readAsStringSync();
   return trim ? data.trim() : data;
 }
