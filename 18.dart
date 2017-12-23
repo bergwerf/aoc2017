@@ -56,11 +56,17 @@ ThreadState process(Map<String, int> mem, List<String> ins, List<int> sndQueue,
     case 'add':
       put(reg, parse(reg) + parse(ins[2]));
       break;
+    case 'sub':
+      put(reg, parse(reg) - parse(ins[2]));
+      break;
     case 'mul':
       put(reg, parse(reg) * parse(ins[2]));
       break;
     case 'mod':
       put(reg, parse(reg) % parse(ins[2]));
+      break;
+    case 'jnz':
+      ptr += parse(reg) != 0 ? parse(ins[2]) - 1 : 0;
       break;
     case 'jgz':
       ptr += parse(reg) > 0 ? parse(ins[2]) - 1 : 0;
